@@ -193,7 +193,7 @@ def game_scores
   game_hash.reduce({}) do |memo, (key, team)|
     team_name = team[:team_name]
     memo[team_name] = {
-      team_name: team_name
+      name: team_name
       score: total_points(team[:players])
     }
     memo
