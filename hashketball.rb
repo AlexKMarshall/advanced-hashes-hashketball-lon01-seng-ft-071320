@@ -187,6 +187,7 @@ end
 
 def winning_team
   game_scores.reduce do |memo, (key, value)|
+    
   end
 end
 
