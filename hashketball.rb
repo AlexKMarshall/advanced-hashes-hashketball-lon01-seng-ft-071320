@@ -214,3 +214,13 @@ def player_with_longest_name
     .max_by {|player| player[:player_name].length}
     .fetch(:player_name)
 end
+
+def most_steals
+  all_player_stats
+    .max_by(|player_name| player[:steals])
+    .fetch(:player_name)
+end
+
+def long_name_steals_a_ton?
+  most_steals === player_with_longest_name
+end
