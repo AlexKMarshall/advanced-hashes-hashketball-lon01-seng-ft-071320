@@ -186,17 +186,15 @@ def most_points_scored
 end
 
 def winning_team
-  puts game_scores
+  game_scores.reduce do |memo, (key, value)|
+  end
 end
 
 def game_scores
   game_hash.reduce({}) do |memo, (key, team)|
     team_name = team[:team_name]
-    points = total_points(team[:players])
-    puts points
-    puts team_name
     memo[team_name] = total_points(team[:players])
-    p memo
+    memo
   end
 end
 
