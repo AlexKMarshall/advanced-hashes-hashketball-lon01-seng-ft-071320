@@ -186,7 +186,7 @@ def most_points_scored
 end
 
 def winning_team
-  pp game_scores
+  game_scores.max_by {|team| team[:score]}
 end
 
 def game_scores
