@@ -217,7 +217,7 @@ end
 
 def most_steals
   all_player_stats
-    .max_by(|player_name| player[:steals])
+    .max_by {|player_name| player[:steals]}
     .fetch(:player_name)
 end
 
