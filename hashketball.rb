@@ -189,8 +189,10 @@ def winning_team
   game_scores.reduce(nil) do |memo, (key, team)|
     memo = memo || team
     
-    
+    memo = memo[:score] > team[:score] ? memo : team
+    memo
   end
+    .fetch(:team_name)
 end
 
 def game_scores
