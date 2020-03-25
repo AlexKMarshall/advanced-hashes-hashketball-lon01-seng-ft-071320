@@ -186,7 +186,7 @@ def most_points_scored
 end
 
 def winning_team
-  game_scores.reduce({}) do |memo, (key, team)|
+  game_scores.reduce(nil) do |memo, (key, team)|
     
   end
 end
