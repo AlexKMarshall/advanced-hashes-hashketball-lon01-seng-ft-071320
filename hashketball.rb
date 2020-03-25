@@ -211,6 +211,6 @@ end
 
 def player_with_longest_name
   all_player_stats
-    .max_by {|player| player[:player_name]}
+    .max_by {|player| player[:player_name].length}
     .fetch(:player_name)
 end
