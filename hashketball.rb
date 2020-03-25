@@ -205,6 +205,7 @@ def game_scores
   end
 end
 
+
 def total_points(players)
   players.reduce(0) {|memo, player| memo += player[:points]}
 end
