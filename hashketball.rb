@@ -195,6 +195,7 @@ def game_scores
     points = total_points(team[:players])
     puts points
     puts team_name
+    memo[team_name] = points
     p memo
   end
 end
