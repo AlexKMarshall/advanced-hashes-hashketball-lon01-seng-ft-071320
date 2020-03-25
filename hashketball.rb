@@ -186,7 +186,7 @@ def most_points_scored
 end
 
 def winning_team
-  game_scores.max_by {|team| 
+  puts game_scores
 end
 
 def game_scores
