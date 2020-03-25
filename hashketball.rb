@@ -205,9 +205,12 @@ def game_scores
   end
 end
 
-
 def total_points(players)
   players.reduce(0) {|memo, player| memo += player[:points]}
 end
 
-
+def player_with_longest_name
+  all_player_stats
+    .max_by {|player| player[:player_name]}
+    .fetch(:player_name)
+end
