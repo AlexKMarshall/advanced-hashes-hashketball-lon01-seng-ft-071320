@@ -179,9 +179,27 @@ def big_shoe_rebounds
     .fetch(:rebounds)
 end
 
+def most_points_scored
+  all_player_stats
+    .max_by {|player| player[:points]}
+    .fetch(:player_name)
+end
 
+def winning_team
+  puts game_scores
+end
 
+def game_scores
+  game_hash.reduce({}) do |memo, (key, team)|
+    team_name = team[:team_name]
+    points = total_points(team[:players])
+    puts points
+    p memo
+  end
+end
 
-
+def total_points(players)
+  players.reduce(0) {|memo, player| memo += player[:points]}
+end
 
 
